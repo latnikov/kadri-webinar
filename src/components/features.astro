@@ -1,0 +1,59 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Провести аудит",
+    description:
+      "Проанализировать работу вашего HR-специалиста: сфокусироваться на зонах, где HR в штате действительно полезен. И понять, где его может не хватить, чтобы сформулировать запрос для кадрового агентства",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Рассмотреть разницу",
+    description:
+      "Понять разницу в компетенциях при подборе линейного персонала и квалифицированного линейного персонала",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "Эффективнее исследовать",
+    description:
+      "Проводить исследования для формирования стратегий по управлению репутацией(RM): локализовывать и устранять негатив на всех площадках или формировать репутацию “с чистого листа",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Узнать больше",
+    description:
+      "Узнать больше о работе с нестандартными площадками: выйти за пределы Avito и HH и создавать новые точки приземления трафика",
+    icon: "bx:bxs-bot",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Вы сможете:
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-2 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<div class="mt-16 md:mt-16">
+  <p class="text-2xl mt-4 text-slate-600">
+    По итогу - <b>сформируете персональный инструментарий</b>, который поможет выделять главное для кандидатов, лучше формулировать тексты вакансий, улучшить воронку найма и получить больше качественных откликов
+  </p>
+</div>
